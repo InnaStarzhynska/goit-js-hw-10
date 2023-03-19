@@ -1,5 +1,10 @@
 import Notiflix from 'notiflix';
 
+const refs = {
+    countryList: document.querySelector('.country-list'),
+    countryInfo: document.querySelector('.country-info')
+};
+
 export default function renderingMarkup(countries) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';

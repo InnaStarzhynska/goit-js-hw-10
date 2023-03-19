@@ -5,13 +5,9 @@ import { fetchCountries } from './js/fetchCountries';
 import renderingMarkup from './js/renderingMarkup';
 
 const DEBOUNCE_DELAY = 300;
-const refs = {
-    input: document.querySelector('#search-box'),
-    countryList: document.querySelector('.country-list'),
-    countryInfo: document.querySelector('.country-info')
-};
+const input = document.querySelector('#search-box');
 
-refs.input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
+input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch (evt){
     const searchQuery = evt.target.value.trim();
